@@ -112,7 +112,7 @@ async function startSessionTask() {
       (await prompt(`Choose container: `)) || containers[0].runtimeId;
   }
   const target = `ecs:${ecsCluster}_${taskId}_${containerId}`;
-
+  console.log(target);
   //start session
   var ssm = new AWS.SSM();
   return await startSession(ssm, target);

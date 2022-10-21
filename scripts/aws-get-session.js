@@ -83,6 +83,8 @@ async function startSessionTask() {
     return;
   }
 
+  console.log(instance);
+
   //start session
   return await startSession(ssm, instance);
 }
